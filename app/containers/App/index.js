@@ -13,7 +13,7 @@
 
 import React from 'react';
 
-import { Layout } from 'antd';
+import { Layout, Button } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -30,6 +30,7 @@ export default class App extends React.PureComponent { // eslint-disable-line re
           {React.Children.toArray(this.props.children)}
         </Content>
         <Footer>Footer</Footer>
+        <Button type="primary">Primary</Button>
       </Layout>
     );
   }
