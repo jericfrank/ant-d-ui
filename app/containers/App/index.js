@@ -13,6 +13,9 @@
 
 import React from 'react';
 
+import { Layout } from 'antd';
+const { Header, Footer, Sider, Content } = Layout;
+
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   static propTypes = {
@@ -21,9 +24,13 @@ export default class App extends React.PureComponent { // eslint-disable-line re
 
   render() {
     return (
-      <div>
-        {React.Children.toArray(this.props.children)}
-      </div>
+      <Layout>
+        <Header>Header</Header>
+        <Content>
+          {React.Children.toArray(this.props.children)}
+        </Content>
+        <Footer>Footer</Footer>
+      </Layout>
     );
   }
 }
